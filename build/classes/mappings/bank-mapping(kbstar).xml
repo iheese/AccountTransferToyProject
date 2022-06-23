@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="KBSTARDAO">
+	     
+    <resultMap id="KBSTARAccount" type="KBSTARAccount">
+        <id property="accountNumberK" column="ACCOUNT_NUMBER" />
+        <result property="name" column="NAME" />
+        <result property="balance" column="BALANCE" />
+        <result property="receiptDate" column="RECEIPT_DATE" />
+        <result property="withdrawDate" column="WITHDRAW_DATE" />
+    </resultMap>
+
+	<select id="getKBSTARAccount" resultMap="KBSTARAccount">
+		select * from kbstar_bank where account_number = #{accountNumberK}
+	</select>
+	
+	<update id="updateKBSTAR">
+		update kbstar_bank set balance = #{balance} where account_number = #{accountNumberK}
+	</update>
+</mapper>
+
+
+
+
+
+
+
+
+

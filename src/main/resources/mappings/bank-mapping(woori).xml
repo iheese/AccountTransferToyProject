@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="WOORIDAO">
+	 <resultMap id="WOORIAccount" type="WOORIAccount">
+        <id property="accountNumberW" column="ACCOUNT_NUMBER" />
+        <result property="name" column="NAME" />
+        <result property="balance" column="BALANCE" />
+        <result property="receiptDate" column="RECEIPT_DATE" />
+        <result property="withdrawDate" column="WITHDRAW_DATE" />
+    </resultMap>
+ 	
+		
+	<select id="getWOORIAccount" resultMap="WOORIAccount">
+		select * from woori_bank where account_number = #{accountNumberW}
+	</select>
+	
+	<update id="updateWOORI">
+		update woori_bank set balance = #{balance} where account_number = #{accountNumberW}
+	</update>
+
+</mapper>
+
+
+
+
+
+
+
+
+
