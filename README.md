@@ -62,6 +62,7 @@
 - DAO 에서는 계좌 조회, 계좌 정보를 업데이트하는 로직을 구현했습니다. 
 
 <hr>
+
 - 스프링이 제공하는  DataSourceTransactionManager을 이용해 Service 구현체의 모든 메소드가 실행될 때 예외가 발생할 경우 적용될 수 있는 Transaction 관리 AOP 설정을 적용해보았습니다.
 
 <hr>
