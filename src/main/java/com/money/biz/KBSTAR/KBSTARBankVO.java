@@ -1,4 +1,4 @@
-package com.ssamz.biz.KBSTAR;
+package com.money.biz.KBSTAR;
 
 import java.sql.Date;
 

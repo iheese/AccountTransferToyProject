@@ -7,7 +7,7 @@
 <center>
 	
 	<h1>계좌 이체하기</h1>
-	<form action="transfer.do">
+	<form action="transfer.do" method="post">
 	<input type="hidden" name="accountNumberW" value="${wooriVO.accountNumberW }"/>
 	<table border="1" cellpadding="0" cellspacing="0" width="500" height="60">
 		<tr>

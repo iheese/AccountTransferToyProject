@@ -1,4 +1,4 @@
-package com.ssamz.web.controller;
+package com.money.web.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -7,10 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.ssamz.biz.KBSTAR.KBSTARBankVO;
-import com.ssamz.biz.WOORI.WOORIBankVO;
-import com.ssamz.biz.service.BankService;
+import com.money.biz.KBSTAR.KBSTARBankVO;
+import com.money.biz.WOORI.WOORIBankVO;
+import com.money.biz.service.BankService;
 
 @Controller
 public class BankController {
@@ -18,7 +19,7 @@ public class BankController {
 	@Autowired
 	private BankService bankService;
 
-	@RequestMapping("/getBalance.do")
+	@RequestMapping(value="/getBalance.do", method=RequestMethod.POST)
 	public String getBalnce(WOORIBankVO vo, HttpSession session) {
 		if (bankService.getWOORIAccount(vo) != null) {
 			session.setAttribute("wooriVO", bankService.getWOORIAccount(vo));
@@ -33,7 +34,7 @@ public class BankController {
 		return "transfer";
 	}
 
-	@RequestMapping("/transfer.do")
+	@RequestMapping(value="/transfer.do", method=RequestMethod.POST)
 	public String transfer(WOORIBankVO wooriBankVO, KBSTARBankVO kbstarBankVO, HttpServletRequest req, Model model) {
 
 		String bankName = (String) req.getParameter("bankName");

@@ -10,14 +10,12 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 	<!-- IoC에  Annotation을 적용하기 위한 설정 -->
-	<context:component-scan base-package="com.ssamz.biz"/>
+	<context:component-scan base-package="com.money.biz"/>
 	
-	<!-- 실제로 사용할 DAO 하나만 등록한다. -->
-	<bean class="com.ssamz.biz.WOORI.WOORIBankDAO"/>
-	<bean class="com.ssamz.biz.KBSTAR.KBSTARBankDAO"/>
+	<!-- DAO 빈 등록 -->
+	<bean class="com.money.biz.WOORI.WOORIBankDAO"/>
+	<bean class="com.money.biz.KBSTAR.KBSTARBankDAO"/>
 	
-	<!-- AOP에  Annotation을 적용하기 위한 설정-->
-	<aop:aspectj-autoproxy/> 
 	
 	<!-- DataSource 등록 -->
 	<context:property-placeholder location="classpath:datasource.properties"/>
@@ -37,6 +35,7 @@
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	
+	<!-- Mybatis 사용을 위한 SqlSessionTemplate -->
 	<bean class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSession"/>
 	</bean>
@@ -46,7 +45,7 @@
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	
-	<!-- 모든 메소드에서 예외발생하면 롤백 커밋은 자동으로 됨 / advice-->
+	<!-- 모든 메소드에서 예외발생하면 롤백, 커밋은 자동으로 됨 -->
 	<tx:advice id="txAdvice" transaction-manager="txManager">
 		<tx:attributes>
 			<tx:method name="*" rollback-for="Exception"/>
@@ -54,9 +53,8 @@
 	</tx:advice>
 	
 	<aop:config>
-		<aop:pointcut id="txPointcut" expression="execution(* com.ssamz.biz..*Impl.*(..))"/>
+		<aop:pointcut id="txPointcut" expression="execution(* com.money.biz..*Impl.*(..))"/>
 		<aop:advisor pointcut-ref="txPointcut" advice-ref="txAdvice"/>
-		<!-- method 이름을 몰라서 aspect는 사용할 수 없다. 트랜잭션에서만 advisor 사용 -->
 	</aop:config>
 	
 </beans>

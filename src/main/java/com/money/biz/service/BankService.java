@@ -1,9 +1,9 @@
-package com.ssamz.biz.service;
+package com.money.biz.service;
 
-import com.ssamz.biz.KBSTAR.KBSTARBankVO;
-import com.ssamz.biz.WOORI.WOORIBankVO;
+import com.money.biz.KBSTAR.KBSTARBankVO;
+import com.money.biz.WOORI.WOORIBankVO;
 
-//3. Service 인터페이스
+// Service 인터페이스
 public interface BankService {
 
 	// 계좌 조회

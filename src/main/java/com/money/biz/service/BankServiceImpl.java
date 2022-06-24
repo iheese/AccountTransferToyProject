@@ -1,12 +1,12 @@
-package com.ssamz.biz.service;
+package com.money.biz.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ssamz.biz.KBSTAR.KBSTARBankDAO;
-import com.ssamz.biz.KBSTAR.KBSTARBankVO;
-import com.ssamz.biz.WOORI.WOORIBankDAO;
-import com.ssamz.biz.WOORI.WOORIBankVO;
+import com.money.biz.KBSTAR.KBSTARBankDAO;
+import com.money.biz.KBSTAR.KBSTARBankVO;
+import com.money.biz.WOORI.WOORIBankDAO;
+import com.money.biz.WOORI.WOORIBankVO;
 
 @Service
 public class BankServiceImpl implements BankService {

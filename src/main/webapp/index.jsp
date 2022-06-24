@@ -7,7 +7,7 @@
 <h1>
 WOORI 은행 계좌번호를 입력하세요
 </h1>
-<form action="getBalance.do">
+<form action="getBalance.do" method="post">
 <table border="1" cellpadding="0" cellspacing="0" width="500" height="60">
 <tr>
 	<td align="left" bgcolor="orange">계좌번호</td>

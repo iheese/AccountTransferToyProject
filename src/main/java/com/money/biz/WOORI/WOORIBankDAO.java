@@ -1,4 +1,4 @@
-package com.ssamz.biz.WOORI;
+package com.money.biz.WOORI;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

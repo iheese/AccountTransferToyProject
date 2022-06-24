@@ -4,9 +4,9 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias type="com.ssamz.biz.WOORI.WOORIBankVO"
+		<typeAlias type="com.money.biz.WOORI.WOORIBankVO"
 			alias="WOORIAccount" />
-		<typeAlias type="com.ssamz.biz.KBSTAR.KBSTARBankVO"
+		<typeAlias type="com.money.biz.KBSTAR.KBSTARBankVO"
 			alias="KBSTARAccount" />
 	</typeAliases>
 
