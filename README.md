@@ -72,6 +72,10 @@
 
 <br>
 
+[프로젝트 회고록](https://ddungi.github.io/project/2022/06/27/accountTransfer/)
+
+<br>
+
 Reference :
 
 - 백엔드 개발자 과정 _ 패스트 캠퍼스, 채규태 강사님 강의의 개인 프로젝트 결과물 입니다. 
