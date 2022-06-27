@@ -68,7 +68,7 @@
 <hr>
 
 - MyBatis를 사용하여 DAO에서 내부에서 사용되던 sql문을 .xml 파일로 따로 관리하여 DAO와 sql문의 관리를 편하게 하였습니다. 
-- DAO 객체 마다 mapping.xml을 따로 하여 유지 보수를 용이하게 하였습니다. 
+- DAO 객체 마다 mapping.xml을 따로 생성하여 유지 보수를 용이하게 하였습니다. 
 
 <br>
 
