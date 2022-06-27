@@ -17,7 +17,7 @@
 	</select>
 	
 	<update id="updateWOORI">
-		update woori_bank set balance = #{balance} where account_number = #{accountNumberW}
+		update woori_bank set balance = #{balance}, withdraw_date=#{withdrawDate}  where account_number = #{accountNumberW}
 	</update>
 
 </mapper>

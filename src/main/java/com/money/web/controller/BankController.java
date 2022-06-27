@@ -35,7 +35,8 @@ public class BankController {
 	}
 
 	@RequestMapping(value="/transfer.do", method=RequestMethod.POST)
-	public String transfer(WOORIBankVO wooriBankVO, KBSTARBankVO kbstarBankVO, HttpServletRequest req, Model model) {
+	public String transfer(WOORIBankVO wooriBankVO, KBSTARBankVO kbstarBankVO,
+			HttpServletRequest req, Model model) {
 
 		String bankName = (String) req.getParameter("bankName");
 		int transferMoney = Integer.parseInt(req.getParameter("transferMoney"));

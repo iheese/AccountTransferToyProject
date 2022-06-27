@@ -17,7 +17,7 @@
 	</select>
 	
 	<update id="updateKBSTAR">
-		update kbstar_bank set balance = #{balance} where account_number = #{accountNumberK}
+		update kbstar_bank set balance = #{balance}, receipt_date=#{receiptDate} where account_number = #{accountNumberK}
 	</update>
 </mapper>
 

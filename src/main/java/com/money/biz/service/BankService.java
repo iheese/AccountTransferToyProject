@@ -11,10 +11,10 @@ public interface BankService {
 	
 	KBSTARBankVO getKBSTARAccount(KBSTARBankVO vo);
 	
-	void transfer(WOORIBankVO woorivo, KBSTARBankVO kbstarvo);
+	void transfer(WOORIBankVO woorivo, KBSTARBankVO kbstarvo) ;
 
 	// 우리은행 출금
-	 void withdrawWOORI(WOORIBankVO woorivo);
+	 void withdrawWOORI(WOORIBankVO woorivo) ;
 	// 국민은행 입금
 	 void receiptKBSTAR(KBSTARBankVO kbstarvo);
 }
