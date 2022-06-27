@@ -62,13 +62,20 @@
 - DAO 에서는 계좌 조회, 계좌 정보를 업데이트하는 로직을 구현했습니다. 
 
 <hr>
+
 - 스프링이 제공하는  DataSourceTransactionManager을 이용해 Service 구현체의 모든 메소드가 실행될 때 예외가 발생할 경우 적용될 수 있는 Transaction 관리 AOP 설정을 적용해보았습니다.
 
 <hr>
 
 - MyBatis를 사용하여 DAO에서 내부에서 사용되던 sql문을 .xml 파일로 따로 관리하여 DAO와 sql문의 관리를 편하게 하였습니다. 
-- DAO 객체 마다 mapping.xml을 따로 하여 유지 보수를 용이하게 하였습니다. 
+- DAO 객체 마다 mapping.xml을 따로 생성하여 유지 보수를 용이하게 하였습니다. 
 
 <br>
+
+[프로젝트 회고록](https://ddungi.github.io/project/2022/06/27/accountTransfer/)
+
+<br>
+
 Reference :
+
 - 백엔드 개발자 과정 _ 패스트 캠퍼스, 채규태 강사님 강의의 개인 프로젝트 결과물 입니다. 
