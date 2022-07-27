@@ -3,6 +3,7 @@
 
 - JAVA: v11, Tomcat : v9.0, Spring : v5.3.9
 - h2(DataBase) : v2.0.202, MyBatis : v3.3.1, MyBatis-Spring : v1.2.4
+- [프로젝트 회고록](https://ddungi.github.io/project/2022/06/27/accountTransfer/)
 
 <br>
 
@@ -70,9 +71,6 @@
 - MyBatis를 사용하여 DAO에서 내부에서 사용되던 sql문을 .xml 파일로 따로 관리하여 DAO와 sql문의 관리를 편하게 하였습니다. 
 - DAO 객체 마다 mapping.xml을 따로 생성하여 유지 보수를 용이하게 하였습니다. 
 
-<br>
-
-[프로젝트 회고록](https://ddungi.github.io/project/2022/06/27/accountTransfer/)
 
 <br>
 
