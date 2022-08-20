@@ -3,7 +3,7 @@
 
 - JAVA: v11, Tomcat : v9.0, Spring : v5.3.9
 - h2(DataBase) : v2.0.202, MyBatis : v3.3.1, MyBatis-Spring : v1.2.4
-- [프로젝트 회고록](https://ddungi.github.io/project/2022/06/27/accountTransfer/)
+- [프로젝트 회고록](https://iheese.github.io/project/2022/06/27/accountTransfer/)
  
 <br>
 
